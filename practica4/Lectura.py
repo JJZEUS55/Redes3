@@ -8,12 +8,29 @@ palabraConexion = ["OK LOGIN",
                    "OK DOWNLOAD",
                    "FAIL DOWNLOAD"]
 
+mensajeDescargas = ["OK DOWNLOAD",
+                    "FAIL DOWNLOAD"]
+
 root = Tk()
+menuFrame = Frame(root)
+menuFrame.pack()
+
 topFrame = Frame(root)
 topFrame.pack()
 
 botFrame = Frame(root)
 botFrame.pack(side=BOTTOM)
+
+# MENU
+menuLbl = ttk.Label(menuFrame, text="Menu")
+menuLbl.pack(side=LEFT)
+
+opciones = ttk.Combobox(menuFrame, state="readonly")
+opciones.pack(side=LEFT)
+opciones["values"] = ["Nombre",
+                      "Dia",
+                      "Hora",
+                      "Archivo"]
 
 # TABLA de VISTA TABLA
 tablaC = VistaTabla.App(botFrame)
@@ -21,7 +38,6 @@ tablaC = VistaTabla.App(botFrame)
 # HORAS
 horaLbl = ttk.Label(topFrame, text="Hora")
 horaLbl.pack(side=LEFT)
-
 horaTxt = ttk.Entry(topFrame)
 horaTxt.pack(side=LEFT)
 
@@ -57,24 +73,99 @@ dias["values"] = ["Mon",
                   "Sat",
                   "Sun"]
 
+# BOTONES
+btnBuscarNombre = Button(topFrame, text="Buscar")
+btnBuscarNombre.pack(side=RIGHT)
+btnBuscarDia = Button(topFrame, text="Buscar")
+btnBuscarDia.pack(side=RIGHT)
+btnBuscarHora = Button(topFrame, text="Buscar")
+btnBuscarHora.pack(side=RIGHT)
+btnBuscarRecurso = Button(topFrame, text="Buscar")
+btnBuscarRecurso.pack(side=RIGHT)
 
-# TABLA
-# rows = []
-# for i in range(5):
-#     cols = []
-#     for j in range(6):
-#         e = Entry(botFrame)
-#         e.grid(row=i, column=j)
-#         e.insert(END, "%d.%d" % (i, j))
-#         cols.append(e)
-#     rows.append(cols)
-# e.pack()
+
+def desaparecer_botones():
+    btnBuscarNombre.pack_forget()
+    btnBuscarHora.pack_forget()
+    btnBuscarRecurso.pack_forget()
+    btnBuscarDia.pack_forget()
+
+def selecciona_opc():
+    opcSeleccionada = opciones.get()
+    if opcSeleccionada == "Nombre":
+        print(opcSeleccionada)
+        desaparecer_botones()
+        btnBuscarNombre = Button(topFrame, text="Buscar", command=busquedanombre)
+        btnBuscarNombre.pack(side=RIGHT)
+        tablaC.limpiarTabla()
+        tablaC.CreateUI()
+        desaparecer_widgets()
+        usuariosLbl.pack(side=LEFT)
+        usuarios.pack(side=LEFT)
+
+
+    elif opcSeleccionada == "Dia":
+        print(opcSeleccionada)
+        desaparecer_botones()
+        btnBuscarDia = Button(topFrame, text="Buscar", command=busquedadia)
+        btnBuscarDia.pack(side=RIGHT)
+        tablaC.limpiarTabla()
+        tablaC.CreateUI()
+        desaparecer_widgets()
+        diaLbl.pack(side=LEFT)
+        dias.pack(side=LEFT)
+
+    elif opcSeleccionada == "Hora":
+        print(opcSeleccionada)
+        desaparecer_botones()
+        btnBuscarHora = Button(topFrame, text="Buscar", command=busquedahora)
+        btnBuscarHora.pack(side=RIGHT)
+        tablaC.limpiarTabla()
+        tablaC.CreateUI()
+        desaparecer_widgets()
+        horaLbl.pack(side=LEFT)
+        horaTxt.pack(side=LEFT)
+        minLbl.pack(side=LEFT)
+        minTxt.pack(side=LEFT)
+
+    elif opcSeleccionada == "Archivo":
+        print(opcSeleccionada)
+        desaparecer_botones()
+        btnBuscarRecurso = Button(topFrame, text="Buscar", command=busqueda_recursos_accedidos)
+        btnBuscarRecurso.pack(side=RIGHT)
+        tablaC.limpiarTabla()
+        tablaC.CreateUI()
+        desaparecer_widgets()
+        usuariosLbl.pack(side=LEFT)
+        usuarios.pack(side=LEFT)
+
+
+def desaparecer_widgets():
+    horaTxt.pack_forget()
+    horaLbl.pack_forget()
+    minLbl.pack_forget()
+    minTxt.pack_forget()
+
+    diaLbl.pack_forget()
+    dias.pack_forget()
+
+    usuariosLbl.pack_forget()
+    usuarios.pack_forget()
+
+
+btnSeleccionarOpc = Button(menuFrame, text="Aceptar", command=selecciona_opc)
+btnSeleccionarOpc.pack(side=LEFT)
+
 
 def busquedanombre():
     openFile = open("vsftpd1.log", "r")
+    tablaC.limpiarTabla()
+    tablaC.CreateUI()
     contador = 0
-    nombre = usuarios.get()
+    palabra = ""
     numLineas = sum(1 for line in open("vsftpd1.log"))
+    nombre = usuarios.get()
+    print("Usuarios Conectados")
     while 1:
         where = openFile.tell()
         line = openFile.readline()
@@ -86,17 +177,27 @@ def busquedanombre():
             if nombre in line:
                 contador += 1
                 print(line)
+                if line in palabraConexion:
+                    palabra = ""
+                else:
+                    palabra = line.split(" ")
+                    # print(palabra)
+                    formato_dividido(palabra)
             else:
                 contador += 1
 
 
 def busquedahora():
     openFile = open("vsftpd1.log", "r")
+    tablaC.limpiarTabla()
+    tablaC.CreateUI()
     contador = 0
+    palabra = ""
     numLineas = sum(1 for line in open("vsftpd1.log"))
     hora = horaTxt.get()
     minutos = minTxt.get()
     horaCompleta = hora + ":" + minutos
+    print("Usuarios Conectados")
     while 1:
         where = openFile.tell()
         line = openFile.readline()
@@ -108,6 +209,12 @@ def busquedahora():
             if horaCompleta in line:
                 contador += 1
                 print(line)
+                if line in palabraConexion:
+                    palabra = ""
+                else:
+                    palabra = line.split(" ")
+                    # print(palabra)
+                    formato_dividido(palabra)
             else:
                 contador += 1
 
@@ -153,7 +260,7 @@ def usuariosconectados():
                 contador += 1
 
 
-def recursos_accedidos():
+def busqueda_recursos_accedidos():
     openFile = open("vsftpd1.log", "r")
     contador = 0
     palabra = ""
@@ -168,7 +275,7 @@ def recursos_accedidos():
             if numLineas == contador:
                 break;
         else:
-            if valores[3] in line:
+            if valores[2] in line:
                 contador += 1
                 print(line)
                 if line in palabraConexion:
@@ -177,10 +284,11 @@ def recursos_accedidos():
                     palabra = line.split(" ")
                     # print(palabra)
                     if "bytes" in line or "Kbyte" in line:
-                        print(palabra[9])
-                        print(palabra[10])
-                        print(palabra[13])
-                        print(palabra[14])
+                        formato_dividido(palabra)
+                        # print(palabra[9]) #OK or Fail
+                        # print(palabra[10]) #Download
+                        # print(palabra[13]) # Archivo
+                        # print(palabra[14]) # Tamaño
                     # formato_dividido(palabra)
             else:
                 contador += 1
@@ -209,7 +317,7 @@ def dividir_frases():
                     palabra = ""
                 else:
                     palabra = line.split(" ")
-                    #print(palabra)
+                    # print(palabra)
                     formato_dividido(palabra)
             else:
                 contador += 1
@@ -223,6 +331,12 @@ def formato_dividido(palabra):
     horaCompleta = palabra[4]
     anio = palabra[5]
     usuario = palabra[8]
+
+    # estado = palabra[9]
+    # accion = palabra[10]
+    # archivo = palabra[13]
+    # tamano = palabra[14]
+
     tablaC.llenarTabla(diaSemana, mes, dia, horaCompleta, anio, usuario)
 
     print("Dia Semana: " + diaSemana)
@@ -233,7 +347,27 @@ def formato_dividido(palabra):
     print("Usuario: " + usuario)
 
 
-btnBuscar = Button(topFrame, text="Buscar", command=recursos_accedidos)
-btnBuscar.pack(side=LEFT)
+def formato_dividido_recursos(palabra):
+    diaSemana = palabra[0]
+    mes = palabra[1]
+    dia = palabra[3]
+    horaCompleta = palabra[4]
+    anio = palabra[5]
+    usuario = palabra[8]
+
+    estado = palabra[9]
+    accion = palabra[10]
+    archivo = palabra[13]
+    tamano = palabra[14]
+
+    tablaC.llenarTabla(diaSemana, mes, dia, horaCompleta, anio, usuario)
+
+    print("Dia Semana: " + diaSemana)
+    print("Mes: " + mes)
+    print("Dia: " + dia)
+    print("Hora: " + horaCompleta)
+    print("Año: " + anio)
+    print("Usuario: " + usuario)
+
 
 root.mainloop()
