@@ -74,7 +74,7 @@ class App(Frame):
         tv.heading('archivo', text='Archivo')
         tv.column('archivo', anchor='center', width=100)
 
-        tv.heading('tamano', text='Tamaño')
+        tv.heading('tamano', text='Tamaño Bytes')
         tv.column('tamano', anchor='center', width=100)
 
         tv.grid()

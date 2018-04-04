@@ -221,6 +221,8 @@ def busquedahora():
 
 def busquedadia():
     openFile = open("vsftpd1.log", "r")
+    tablaC.limpiarTabla()
+    tablaC.CreateUI()
     contador = 0
     numLineas = sum(1 for line in open("vsftpd1.log"))
     dia = dias.get()
@@ -262,6 +264,9 @@ def usuariosconectados():
 
 def busqueda_recursos_accedidos():
     openFile = open("vsftpd1.log", "r")
+    tablaC.limpiarTabla()
+    tablaC.CreateUI2()
+    nombre = usuarios.get()
     contador = 0
     palabra = ""
     numLineas = sum(1 for line in open("vsftpd1.log"))
@@ -275,7 +280,7 @@ def busqueda_recursos_accedidos():
             if numLineas == contador:
                 break;
         else:
-            if valores[2] in line:
+            if nombre in line:
                 contador += 1
                 print(line)
                 if line in palabraConexion:
@@ -284,7 +289,7 @@ def busqueda_recursos_accedidos():
                     palabra = line.split(" ")
                     # print(palabra)
                     if "bytes" in line or "Kbyte" in line:
-                        formato_dividido(palabra)
+                        formato_dividido_recursos(palabra)
                         # print(palabra[9]) #OK or Fail
                         # print(palabra[10]) #Download
                         # print(palabra[13]) # Archivo
@@ -360,7 +365,7 @@ def formato_dividido_recursos(palabra):
     archivo = palabra[13]
     tamano = palabra[14]
 
-    tablaC.llenarTabla(diaSemana, mes, dia, horaCompleta, anio, usuario)
+    tablaC.llenarTablaRecursos(diaSemana, mes, dia, horaCompleta, anio, usuario, estado, accion, archivo, tamano)
 
     print("Dia Semana: " + diaSemana)
     print("Mes: " + mes)
