@@ -1,0 +1,50 @@
+Crashlog for Cemu 1.11.4b
+Date: 15-02-2018 21:47:16
+
+-----------------------------------------
+   Stack trace
+-----------------------------------------
+0x00007ff79b5db8e0 (+0x00007ff79b5db8e0)  Cemu.exe         cemuLog_log
+0x00007ff79b5db8e0 (+0x00007ff79b5db8e0)  Cemu.exe         cemuLog_log
+0x00007ffed4b4efa0 (+0x00007ffed4b4efa0)  Cemu.exe         RtlUserThreadStart
+0x00007ffed4afbcc0 (+0x00007ffed4afbcc0)  Cemu.exe         RtlWalkFrameChain
+0x00007ffed4b83b80 (+0x00007ffed4b83b80)  Cemu.exe         KiUserExceptionDispatcher
+0x00007ff79b625850 (+0x00007ff79b625850)  Cemu.exe         PPCCore_executeCallback
+0x00007ff79b625850 (+0x00007ff79b625850)  Cemu.exe         PPCCore_executeCallback
+0x00007ffed0f53e30 (+0x00007ffed0f53e30)  Cemu.exe         GetNLSVersionEx
+Exception 0xc0000005 at 0x7ff79b62b0ab(+0x14b0ab) in module Cemu.exe
+cemu.exe at 0x7ff79b4e0000
+
+RAX=0000000000000018 RBX=00000000807f0018 RCX=0000000000000003 RDX=00000000906470bc
+RSP=00000066511ffc70 RBP=0000000000000018 RDI=0000021b5bae38c0 RSI=0000000000000008
+R8 =0000000000000018 R9 =0000000000000000 R10=0000000000000000 R11=0000021a53610000
+R12=0000000000000000 R13=0000000000000000 R14=0000000000000000 R15=0000000000000000
+
+-----------------------------------------
+   Game info
+-----------------------------------------
+Game: New SUPER MARIO BROS. U [US]
+TitleId: 5000010101d00
+RPXHash: 80c3dfdc
+
+-----------------------------------------
+   Active PPC instance
+-----------------------------------------
+IP 0x0292c04c LR 0x024bdeec Thread 0x90647570
+
+-----------------------------------------
+   PPC threads
+-----------------------------------------
+90647570 Ent 00e08d20 IP 022a64e0 LR e0642a02 RUNNING   Aff 010 Pri 80 Name NULL
+10d7eae8 Ent 029c3cc0 IP 00e0849c LR cc359c02 SUSPENDED Aff 010 Pri 84 Name Prepare Thread
+168903a0 Ent 029c3cc0 IP 00e0849c LR cc359c02 SUSPENDED Aff 010 Pri 81 Name RenderObjParallelExecuterThread
+16892db0 Ent 029c3cc0 IP 00e0849c LR cc359c02 SUSPENDED Aff 100 Pri 81 Name RenderObjParallelExecuterThread
+168957c0 Ent 029c3cc0 IP 00e0849c LR cc359c02 SUSPENDED Aff 001 Pri 81 Name RenderObjParallelExecuterThread
+1020e4c0 Ent 02aa9ebc IP 00e0849c LR 7ca0aa02 SUSPENDED Aff 100 Pri 68 Name nw::snd::SoundThread
+9051b7f8 Ent 00e08d6c IP 00e08d6c LR 0000e000 SUSPENDED Aff 100 Pri 14 Name {SYS AX IST}
+102178a0 Ent 02aa9ebc IP 00e0849c LR 7ca0aa02 SUSPENDED Aff 100 Pri 67 Name nw::snd::TaskThread
+37b88920 Ent 029c3cc0 IP 00e0849c LR cc359c02 SUSPENDED Aff 010 Pri 81 Name PtclParallelExecuter
+37b8b2f8 Ent 029c3cc0 IP 00e0849c LR cc359c02 SUSPENDED Aff 001 Pri 81 Name PtclParallelExecuter
+3b23eb40 Ent 029c3cc0 IP 00e0849c LR cc359c02 SUSPENDED Aff 010 Pri 83 Name SaveMgrThread
+3c613308 Ent 029c3cc0 IP 00e0849c LR cc359c02 SUSPENDED Aff 010 Pri 89 Name CommentMgrThread
+3c61ddf8 Ent 029c3cc0 IP 00e0849c LR cc359c02 SUSPENDED Aff 010 Pri 86 Name BackgroundLoadMgrThread
