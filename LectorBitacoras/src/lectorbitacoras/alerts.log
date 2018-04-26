@@ -1,0 +1,752 @@
+** Alert 1524621032.0: mail  - ossec,
+2018 Apr 25 01:50:32 contenedor2->ossec-monitord
+Rule: 502 (level 3) -> 'Ossec server started.'
+ossec: Ossec started.
+
+** Alert 1524621205.157: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice: Operation not permitted
+
+** Alert 1524621205.434: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/systemd-tmpfiles-clean.service: Operation not permitted
+
+** Alert 1524621205.742: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /user.slice: Operation not permitted
+
+** Alert 1524621205.1017: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /init.scope: Operation not permitted
+
+** Alert 1524621205.1293: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/proc-swaps.mount: Operation not permitted
+
+** Alert 1524621205.1588: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/proc-stat.mount: Operation not permitted
+
+** Alert 1524621205.1882: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/dev-lxd.mount: Operation not permitted
+
+** Alert 1524621205.2174: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/systemd-journald.service: Operation not permitted
+
+** Alert 1524621205.2477: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/dev-mqueue.mount: Operation not permitted
+
+** Alert 1524621205.2772: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/cron.service: Operation not permitted
+
+** Alert 1524621205.3063: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/irqbalance.service: Operation not permitted
+
+** Alert 1524621205.3360: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/systemd-logind.service: Operation not permitted
+
+** Alert 1524621205.3661: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/lvm2-monitor.service: Operation not permitted
+
+** Alert 1524621205.3960: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/cloud-final.service: Operation not permitted
+
+** Alert 1524621205.4258: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/proc-sys-fs-binfmt_misc.mount: Operation not permitted
+
+** Alert 1524621205.4566: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/apache2.service: Operation not permitted
+
+** Alert 1524621205.4860: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/console-getty.service: Operation not permitted
+
+** Alert 1524621205.5160: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/proc-meminfo.mount: Operation not permitted
+
+** Alert 1524621205.5457: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/ufw.service: Operation not permitted
+
+** Alert 1524621205.5747: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/systemd-update-utmp.service: Operation not permitted
+
+** Alert 1524621205.6053: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/systemd-random-seed.service: Operation not permitted
+
+** Alert 1524621205.6359: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/mdadm.service: Operation not permitted
+
+** Alert 1524621205.6651: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/ssh.service: Operation not permitted
+
+** Alert 1524621205.6941: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/dev-ptmx.mount: Operation not permitted
+
+** Alert 1524621205.7234: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/systemd-tmpfiles-setup.service: Operation not permitted
+
+** Alert 1524621205.7543: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/rsyslog.service: Operation not permitted
+
+** Alert 1524621205.7837: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/sys-kernel-debug-tracing.mount: Operation not permitted
+
+** Alert 1524621205.8146: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/resolvconf.service: Operation not permitted
+
+** Alert 1524621205.8443: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/dbus.service: Operation not permitted
+
+** Alert 1524621205.8734: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/dev-zero.mount: Operation not permitted
+
+** Alert 1524621205.9027: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/cloud-init.service: Operation not permitted
+
+** Alert 1524621205.9324: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/systemd-user-sessions.service: Operation not permitted
+
+** Alert 1524621205.9632: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/sys-fs-fuse-connections.mount: Operation not permitted
+
+** Alert 1524621205.9940: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/networking.service: Operation not permitted
+
+** Alert 1524621205.10237: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/atd.service: Operation not permitted
+
+** Alert 1524621205.10528: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/dev-fuse.mount: Operation not permitted
+
+** Alert 1524621205.10822: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/dev-null.mount: Operation not permitted
+
+** Alert 1524621205.11116: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/systemd-journal-flush.service: Operation not permitted
+
+** Alert 1524621205.11425: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/sys-kernel-debug.mount: Operation not permitted
+
+** Alert 1524621205.11727: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/cloud-init-local.service: Operation not permitted
+
+** Alert 1524621205.12031: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/proc-diskstats.mount: Operation not permitted
+
+** Alert 1524621205.12331: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/unattended-upgrades.service: Operation not permitted
+
+** Alert 1524621205.12638: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/apparmor.service: Operation not permitted
+
+** Alert 1524621205.12934: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/var-lib-lxcfs.mount: Operation not permitted
+
+** Alert 1524621205.13233: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/polkitd.service: Operation not permitted
+
+** Alert 1524621205.13528: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/rc-local.service: Operation not permitted
+
+** Alert 1524621205.13824: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/snapd.service: Operation not permitted
+
+** Alert 1524621205.14117: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/systemd-udevd.service: Operation not permitted
+
+** Alert 1524621205.14418: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/lxd-containers.service: Operation not permitted
+
+** Alert 1524621205.14720: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/proc-uptime.mount: Operation not permitted
+
+** Alert 1524621205.15017: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/systemd-sysctl.service: Operation not permitted
+
+** Alert 1524621205.15319: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/proc-cpuinfo.mount: Operation not permitted
+
+** Alert 1524621205.15617: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/systemd-udev-trigger.service: Operation not permitted
+
+** Alert 1524621205.15925: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/dev-net-tun.mount: Operation not permitted
+
+** Alert 1524621205.16222: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/dev-full.mount: Operation not permitted
+
+** Alert 1524621205.16516: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/system-getty.slice: Operation not permitted
+
+** Alert 1524621205.16814: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/dev-tty.mount: Operation not permitted
+
+** Alert 1524621205.17107: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/-.mount: Operation not permitted
+
+** Alert 1524621205.17394: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/accounts-daemon.service: Operation not permitted
+
+** Alert 1524621205.17697: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/cloud-config.service: Operation not permitted
+
+** Alert 1524621205.17997: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/dev-urandom.mount: Operation not permitted
+
+** Alert 1524621205.18294: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/dev-.lxd\x2dmounts.mount: Operation not permitted
+
+** Alert 1524621205.18598: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/ondemand.service: Operation not permitted
+
+** Alert 1524621205.18894: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/dev-random.mount: Operation not permitted
+
+** Alert 1524621205.19190: mail  - syslog,errors,
+2018 Apr 25 01:53:25 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 01:53:25 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/apport.service: Operation not permitted
+
+** Alert 1524621539.19484: - ossec,rootcheck,
+2018 Apr 25 01:58:59 contenedor2->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Testing against the CIS Debian Linux Benchmark v1.0. File: /etc/debian_version. Reference: https://benchmarks.cisecurity.org/tools2/linux/CIS_Debian_Benchmark_v1.0.pdf .
+
+** Alert 1524621539.19810: - ossec,rootcheck,
+2018 Apr 25 01:58:59 contenedor2->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 1.4 - Robust partition scheme - /tmp is not on its own partition {CIS: 1.4 Debian Linux}. File: /etc/fstab. Reference: https://benchmarks.cisecurity.org/tools2/linux/CIS_Debian_Benchmark_v1.0.pdf .
+
+** Alert 1524621539.20179: - ossec,rootcheck,
+2018 Apr 25 01:58:59 contenedor2->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 1.4 - Robust partition scheme - /opt is not on its own partition {CIS: 1.4 Debian Linux}. File: /opt. Reference: https://benchmarks.cisecurity.org/tools2/linux/CIS_Debian_Benchmark_v1.0.pdf .
+
+** Alert 1524621539.20542: - ossec,rootcheck,
+2018 Apr 25 01:58:59 contenedor2->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 1.4 - Robust partition scheme - /var is not on its own partition {CIS: 1.4 Debian Linux}. File: /etc/fstab. Reference: https://benchmarks.cisecurity.org/tools2/linux/CIS_Debian_Benchmark_v1.0.pdf .
+
+** Alert 1524621539.20911: - ossec,rootcheck,
+2018 Apr 25 01:58:59 contenedor2->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 4.13 - Disable standard boot services - Web server Enabled {CIS: 4.13 Debian Linux} {PCI_DSS: 2.2.2}. File: /etc/init.d/apache2. Reference: https://benchmarks.cisecurity.org/tools2/linux/CIS_Debian_Benchmark_v1.0.pdf .
+
+** Alert 1524621539.21301: - ossec,rootcheck,
+2018 Apr 25 01:58:59 contenedor2->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 5.2 - Network parameters - IP Forwarding enabled {CIS: 5.2 Debian Linux}. File: /proc/sys/net/ipv4/ip_forward. Reference: https://benchmarks.cisecurity.org/tools2/linux/CIS_Debian_Benchmark_v1.0.pdf .
+
+** Alert 1524622235.21673: mail  - ossec,
+2018 Apr 25 02:10:35 contenedor2->ossec-monitord
+Rule: 502 (level 3) -> 'Ossec server started.'
+ossec: Ossec started.
+
+** Alert 1524622948.21834: mail  - ossec,
+2018 Apr 25 02:22:28 contenedor2->ossec-monitord
+Rule: 502 (level 3) -> 'Ossec server started.'
+ossec: Ossec started.
+
+** Alert 1524622966.21995: mail  - ossec,
+2018 Apr 25 02:22:46 (contenedor3) 10.198.59.240->ossec
+Rule: 501 (level 3) -> 'New ossec agent connected.'
+ossec: Agent started: 'contenedor3->10.198.59.240'.
+
+** Alert 1524623048.22198: mail  - ossec,syscheck,
+2018 Apr 25 02:24:08 contenedor2->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/etc/ufw/user.rules'
+Size changed from '307' to '1572'
+Old md5sum was: 'a3fbaef910466dcc137f9037106c78f7'
+New md5sum is : 'fd1d5a87cbef6c86fb6ad6e159956f1f'
+Old sha1sum was: 'f1f32a5a9ecb6c01b2cefd230847c90386487678'
+New sha1sum is : 'fe4a2d0239abe640a40c90d14f4ebe414264e7fc'
+
+
+** Alert 1524623048.22657: mail  - ossec,syscheck,
+2018 Apr 25 02:24:08 contenedor2->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/etc/ufw/ufw.conf'
+Size changed from '312' to '313'
+Old md5sum was: '44eab12c7b5c683d750b83dcffb6cccb'
+New md5sum is : '369a693fc6cb1b3277c750b8137b6f9b'
+Old sha1sum was: '314fc2510a05b6c05c72a7053af453bf578bc0a5'
+New sha1sum is : 'd0566728b31fb39aa46df4c1b4bbf86474f08a63'
+
+
+** Alert 1524623048.23113: mail  - ossec,syscheck,
+2018 Apr 25 02:24:08 contenedor2->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/etc/ufw/user6.rules'
+Size changed from '107' to '1580'
+Old md5sum was: '9d2810d270f5e8db6c6110f3f7fafa2a'
+New md5sum is : '7f168303ba860dea3fa32ff451233245'
+Old sha1sum was: 'c5ba6486b1daf14a6bac82125bb2352abc144e94'
+New sha1sum is : '2280ed33504650aa0f66f8d38c655baf95d2e528'
+
+
+** Alert 1524623447.23573: - ossec,rootcheck,
+2018 Apr 25 02:30:47 (contenedor3) 10.198.59.240->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Testing against the CIS Debian Linux Benchmark v1.0. File: /etc/debian_version. Reference: https://benchmarks.cisecurity.org/tools2/linux/CIS_Debian_Benchmark_v1.0.pdf .
+
+** Alert 1524623447.23915: - ossec,rootcheck,
+2018 Apr 25 02:30:47 (contenedor3) 10.198.59.240->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 1.4 - Robust partition scheme - /tmp is not on its own partition {CIS: 1.4 Debian Linux}. File: /etc/fstab. Reference: https://benchmarks.cisecurity.org/tools2/linux/CIS_Debian_Benchmark_v1.0.pdf .
+
+** Alert 1524623447.24300: - ossec,rootcheck,
+2018 Apr 25 02:30:47 (contenedor3) 10.198.59.240->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 1.4 - Robust partition scheme - /opt is not on its own partition {CIS: 1.4 Debian Linux}. File: /opt. Reference: https://benchmarks.cisecurity.org/tools2/linux/CIS_Debian_Benchmark_v1.0.pdf .
+
+** Alert 1524623447.24679: - ossec,rootcheck,
+2018 Apr 25 02:30:47 (contenedor3) 10.198.59.240->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 1.4 - Robust partition scheme - /var is not on its own partition {CIS: 1.4 Debian Linux}. File: /etc/fstab. Reference: https://benchmarks.cisecurity.org/tools2/linux/CIS_Debian_Benchmark_v1.0.pdf .
+
+** Alert 1524623447.25064: - ossec,rootcheck,
+2018 Apr 25 02:30:47 (contenedor3) 10.198.59.240->rootcheck
+Rule: 516 (level 3) -> 'System Audit event.'
+System Audit: CIS - Debian Linux - 5.2 - Network parameters - IP Forwarding enabled {CIS: 5.2 Debian Linux}. File: /proc/sys/net/ipv4/ip_forward. Reference: https://benchmarks.cisecurity.org/tools2/linux/CIS_Debian_Benchmark_v1.0.pdf .
+
+** Alert 1524626330.25452: mail  - ossec,
+2018 Apr 25 03:18:50 contenedor2->ossec-monitord
+Rule: 502 (level 3) -> 'Ossec server started.'
+ossec: Ossec started.
+
+** Alert 1524627165.25613: mail  - ossec,
+2018 Apr 25 03:32:45 contenedor2->ossec-monitord
+Rule: 502 (level 3) -> 'Ossec server started.'
+ossec: Ossec started.
+
+** Alert 1524627623.25774: mail  - ossec,
+2018 Apr 25 03:40:23 contenedor2->ossec-monitord
+Rule: 502 (level 3) -> 'Ossec server started.'
+ossec: Ossec started.
+
+** Alert 1524627997.25935: mail  - ossec,
+2018 Apr 25 03:46:37 contenedor2->ossec-monitord
+Rule: 502 (level 3) -> 'Ossec server started.'
+ossec: Ossec started.
+
+** Alert 1524628571.26096: mail  - ossec,
+2018 Apr 25 03:56:11 contenedor2->ossec-monitord
+Rule: 502 (level 3) -> 'Ossec server started.'
+ossec: Ossec started.
+
+** Alert 1524629164.26257: mail  - ossec,
+2018 Apr 25 04:06:04 (contenedor3) 10.198.59.240->ossec
+Rule: 503 (level 3) -> 'Ossec agent started.'
+ossec: Agent started: 'contenedor3->10.198.59.240'.
+
+** Alert 1524629164.26454: mail  - ossec,syscheck,
+2018 Apr 25 04:06:04 (contenedor3) 10.198.59.240->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/var/ossec/etc/ossec.conf'
+Size changed from '2796' to '2904'
+Old md5sum was: 'cc159aff8e4258d56cf87bbb1e40cfe3'
+New md5sum is : '5018eec1167edbe7127d19c75a435c2f'
+Old sha1sum was: 'b8838ec3769325cf89e7d49c505c233427e403e9'
+New sha1sum is : '282fd68bee674b15440c0cd18e382dfeb04c8e94'
+
+
+** Alert 1524630045.26936: mail  - ossec,
+2018 Apr 25 04:20:45 (contenedor3) 10.198.59.240->ossec
+Rule: 503 (level 3) -> 'Ossec agent started.'
+ossec: Agent started: 'contenedor3->10.198.59.240'.
+
+** Alert 1524630045.27133: mail  - ossec,syscheck,
+2018 Apr 25 04:20:45 (contenedor3) 10.198.59.240->syscheck
+Rule: 551 (level 7) -> 'Integrity checksum changed again (2nd time).'
+Integrity checksum changed for: '/var/ossec/etc/ossec.conf'
+Size changed from '2904' to '3007'
+Old md5sum was: '5018eec1167edbe7127d19c75a435c2f'
+New md5sum is : 'adb370a3f78cc662520968f6c3673dc7'
+Old sha1sum was: '282fd68bee674b15440c0cd18e382dfeb04c8e94'
+New sha1sum is : '6e78e1ba6d5ebb8ce7267339be4283db1dbe3376'
+
+
+** Alert 1524630485.27632: mail  - ossec,syscheck,
+2018 Apr 25 04:28:05 (contenedor3) 10.198.59.240->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/carpetaA/fgg.txt'
+Old md5sum was: 'xxx'
+New md5sum is : 'd41d8cd98f00b204e9800998ecf8427e'
+Old sha1sum was: 'xxx'
+New sha1sum is : 'da39a3ee5e6b4b0d3255bfef95601890afd80709'
+
+
+** Alert 1524630485.28005: mail  - ossec,syscheck,
+2018 Apr 25 04:28:05 (contenedor3) 10.198.59.240->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/carpetaA/prueba2.txt'
+Old md5sum was: 'xxx'
+New md5sum is : 'd41d8cd98f00b204e9800998ecf8427e'
+Old sha1sum was: 'xxx'
+New sha1sum is : 'da39a3ee5e6b4b0d3255bfef95601890afd80709'
+
+
+** Alert 1524630485.28382: mail  - ossec,syscheck,
+2018 Apr 25 04:28:05 (contenedor3) 10.198.59.240->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/carpetaA/prueba3.txt'
+Old md5sum was: 'xxx'
+New md5sum is : 'd41d8cd98f00b204e9800998ecf8427e'
+Old sha1sum was: 'xxx'
+New sha1sum is : 'da39a3ee5e6b4b0d3255bfef95601890afd80709'
+
+
+** Alert 1524630485.28759: mail  - ossec,syscheck,
+2018 Apr 25 04:28:05 (contenedor3) 10.198.59.240->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/carpetaA/jojo.txt'
+Size changed from '0' to '8'
+Old md5sum was: 'xxx'
+New md5sum is : 'cd8d7a9cab7f1a3592d6f53bd3d220eb'
+Old sha1sum was: 'xxx'
+New sha1sum is : 'fa5bb2cf8dc36719d6cdd294114086f90a97b41f'
+
+
+** Alert 1524630625.29162: mail  - ossec,
+2018 Apr 25 04:30:25 contenedor2->ossec-monitord
+Rule: 502 (level 3) -> 'Ossec server started.'
+ossec: Ossec started.
+
+** Alert 1524631215.29323: mail  - ossec,
+2018 Apr 25 04:40:15 (contenedor3) 10.198.59.240->ossec
+Rule: 503 (level 3) -> 'Ossec agent started.'
+ossec: Agent started: 'contenedor3->10.198.59.240'.
+
+** Alert 1524631215.29520: mail  - ossec,syscheck,
+2018 Apr 25 04:40:15 (contenedor3) 10.198.59.240->syscheck
+Rule: 552 (level 7) -> 'Integrity checksum changed again (3rd time).'
+Integrity checksum changed for: '/var/ossec/etc/ossec.conf'
+Size changed from '3007' to '3006'
+Old md5sum was: 'adb370a3f78cc662520968f6c3673dc7'
+New md5sum is : 'b890979efe191e57b11947ca0729b5f5'
+Old sha1sum was: '6e78e1ba6d5ebb8ce7267339be4283db1dbe3376'
+New sha1sum is : 'dc46496f629010000fda620a6029f5ec0f4a1d71'
+
+
+** Alert 1524632155.30019: mail  - ossec,
+2018 Apr 25 04:55:55 contenedor2->ossec-monitord
+Rule: 502 (level 3) -> 'Ossec server started.'
+ossec: Ossec started.
+
+** Alert 1524632254.30180: mail  - ossec,
+2018 Apr 25 04:57:34 (contenedor3) 10.198.59.240->ossec
+Rule: 503 (level 3) -> 'Ossec agent started.'
+ossec: Agent started: 'contenedor3->10.198.59.240'.
+
+** Alert 1524632742.30377: mail  - ossec,
+2018 Apr 25 05:05:42 (contenedor3) 10.198.59.240->ossec
+Rule: 503 (level 3) -> 'Ossec agent started.'
+ossec: Agent started: 'contenedor3->10.198.59.240'.
+
+** Alert 1524633297.30574: mail  - ossec,
+2018 Apr 25 05:14:57 contenedor2->ossec-monitord
+Rule: 502 (level 3) -> 'Ossec server started.'
+ossec: Ossec started.
+
+** Alert 1524634163.30735: mail  - ossec,
+2018 Apr 25 05:29:23 contenedor2->ossec-monitord
+Rule: 502 (level 3) -> 'Ossec server started.'
+ossec: Ossec started.
+
+** Alert 1524634219.30896: mail  - ossec,syscheck,
+2018 Apr 25 05:30:19 contenedor2->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/carpetaA/algo.txt'
+Size changed from '18' to '0'
+Old md5sum was: 'ccc0d5c707f0bb83bdf327ae77000f55'
+New md5sum is : 'xxx'
+Old sha1sum was: '02900b2113c4bbfac6e99aff4576a361fc328682'
+New sha1sum is : 'xxx'
+
+
+** Alert 1524634219.31284: mail  - ossec,syscheck,
+2018 Apr 25 05:30:19 contenedor2->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/carpetaA/mm.txt'
+Old md5sum was: 'd41d8cd98f00b204e9800998ecf8427e'
+New md5sum is : 'xxx'
+Old sha1sum was: 'da39a3ee5e6b4b0d3255bfef95601890afd80709'
+New sha1sum is : 'xxx'
+
+
+** Alert 1524634219.31640: mail  - ossec,syscheck,
+2018 Apr 25 05:30:19 contenedor2->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/carpetaA/mmxxxx.txt'
+Old md5sum was: 'd41d8cd98f00b204e9800998ecf8427e'
+New md5sum is : 'xxx'
+Old sha1sum was: 'da39a3ee5e6b4b0d3255bfef95601890afd80709'
+New sha1sum is : 'xxx'
+
+
+** Alert 1524634282.32000: mail  - ossec,
+2018 Apr 25 05:31:22 (contenedor3) 10.198.59.240->ossec
+Rule: 503 (level 3) -> 'Ossec agent started.'
+ossec: Agent started: 'contenedor3->10.198.59.240'.
+
+** Alert 1524634282.32197: mail  - ossec,syscheck,
+2018 Apr 25 05:31:22 (contenedor3) 10.198.59.240->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/var/ossec/etc/ossec.conf'
+Size changed from '3006' to '2800'
+Old md5sum was: 'b890979efe191e57b11947ca0729b5f5'
+New md5sum is : '6675d337c042c3f1e814c5e40fc57c40'
+Old sha1sum was: 'dc46496f629010000fda620a6029f5ec0f4a1d71'
+New sha1sum is : '0a74bf98c35fce5c721b171e9cef932e802f1278'
+
+
+** Alert 1524634809.32679: mail  - ossec,syscheck,
+2018 Apr 25 05:40:09 (contenedor3) 10.198.59.240->syscheck
+Rule: 553 (level 7) -> 'File deleted. Unable to retrieve checksum.'
+File '/carpetaB/gggd' was deleted. Unable to retrieve checksum.
+
+** Alert 1524634818.32922: mail  - ossec,syscheck,
+2018 Apr 25 05:40:18 (contenedor3) 10.198.59.240->syscheck
+Rule: 553 (level 7) -> 'File deleted. Unable to retrieve checksum.'
+File '/carpetaB/gggd.txt' was deleted. Unable to retrieve checksum.
+
+** Alert 1524634826.33169: mail  - ossec,syscheck,
+2018 Apr 25 05:40:26 (contenedor3) 10.198.59.240->syscheck
+Rule: 553 (level 7) -> 'File deleted. Unable to retrieve checksum.'
+File '/carpetaB/gggd1' was deleted. Unable to retrieve checksum.
+
+** Alert 1524634907.33413: mail  - ossec,syscheck,
+2018 Apr 25 05:41:47 (contenedor3) 10.198.59.240->syscheck
+Rule: 553 (level 7) -> 'File deleted. Unable to retrieve checksum.'
+File '/carpetaB/kk.l' was deleted. Unable to retrieve checksum.
+
+** Alert 1524635207.33656: mail  - local,syslog,syscheck,
+2018 Apr 25 05:46:47 (contenedor3) 10.198.59.240->syscheck
+Rule: 554 (level 7) -> 'File added to the system'
+New file '/carpetaB/algerian.txt' added to the file system.
+
+** Alert 1524635823.33884: mail  - local,syslog,syscheck,
+2018 Apr 25 05:57:03 (contenedor3) 10.198.59.240->syscheck
+Rule: 554 (level 7) -> 'File added to the system'
+New file '/carpetaB/ramificacion.go' added to the file system.
+
+** Alert 1524635823.34115: mail  - local,syslog,syscheck,
+2018 Apr 25 05:57:03 (contenedor3) 10.198.59.240->syscheck
+Rule: 554 (level 7) -> 'File added to the system'
+New file '/carpetaB/red/red.html' added to the file system.
+
+** Alert 1524636386.34343: mail  - local,syslog,syscheck,
+2018 Apr 25 06:06:26 (contenedor3) 10.198.59.240->syscheck
+Rule: 554 (level 7) -> 'File added to the system'
+New file '/carpetaB/red/.red.html.swp' added to the file system.
+
+** Alert 1524636411.34576: mail  - ossec,syscheck,
+2018 Apr 25 06:06:51 (contenedor3) 10.198.59.240->syscheck
+Rule: 553 (level 7) -> 'File deleted. Unable to retrieve checksum.'
+File '/carpetaB/red/.red.html.swp' was deleted. Unable to retrieve checksum.
+
+** Alert 1524636415.34832: mail  - ossec,syscheck,
+2018 Apr 25 06:06:55 (contenedor3) 10.198.59.240->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/carpetaB/red/red.html'
+Size changed from '0' to '9'
+Old md5sum was: 'd41d8cd98f00b204e9800998ecf8427e'
+New md5sum is : '889bcb766dc3dac5b0b926cdcfc94405'
+Old sha1sum was: 'da39a3ee5e6b4b0d3255bfef95601890afd80709'
+New sha1sum is : '91358ff3b62340e983da32b3333d797a1131ab58'
+What changed:
+0a1
+> jajajaja
+
+
+** Alert 1524636603.35334: mail  - ossec,
+2018 Apr 25 06:10:03 contenedor2->ossec-monitord
+Rule: 502 (level 3) -> 'Ossec server started.'
+ossec: Ossec started.
+
+** Alert 1524636784.35495: mail  - ossec,syscheck,
+2018 Apr 25 06:13:04 (contenedor3) 10.198.59.240->syscheck
+Rule: 553 (level 7) -> 'File deleted. Unable to retrieve checksum.'
+File '/carpetaB/red/red.html' was deleted. Unable to retrieve checksum.
+
+** Alert 1524637097.35746: mail  - local,syslog,syscheck,
+2018 Apr 25 06:18:17 (contenedor3) 10.198.59.240->syscheck
+Rule: 554 (level 7) -> 'File added to the system'
+New file '/carpetaB/otraprueba.ga' added to the file system.
+
+** Alert 1524638700.35975: mail  - ossec,syscheck,
+2018 Apr 25 06:45:00 (contenedor3) 10.198.59.240->syscheck
+Rule: 550 (level 7) -> 'Integrity checksum changed.'
+Integrity checksum changed for: '/carpetaB/otraprueba.ga'
+Size changed from '0' to '28'
+Old md5sum was: 'd41d8cd98f00b204e9800998ecf8427e'
+New md5sum is : '7d98a40c24d8383ed1aeefa4937b764e'
+Old sha1sum was: 'da39a3ee5e6b4b0d3255bfef95601890afd80709'
+New sha1sum is : '934f6ddb175b66a74d888175e46b7179b906e703'
+What changed:
+0a1
+> escribiendo nuevo contenido
+
+
+** Alert 1524639096.36498: mail  - syslog,errors,
+2018 Apr 25 06:51:36 (contenedor3) 10.198.59.240->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 06:51:35 contenedor3 systemd[1]: Failed to reset devices.list on /system.slice/apt-daily-upgrade.service: Operation not permitted
+
+** Alert 1524666786.36819: mail  - syslog,errors,
+2018 Apr 25 14:33:06 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 14:33:04 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/apt-daily.service: Operation not permitted
+
+** Alert 1524669046.37116: mail  - syslog,errors,
+2018 Apr 25 15:10:46 (contenedor3) 10.198.59.240->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 15:10:45 contenedor3 systemd[1]: Failed to reset devices.list on /system.slice/apt-daily.service: Operation not permitted
+
+** Alert 1524674329.37429: mail  - ossec,
+2018 Apr 25 16:38:49 contenedor2->ossec-monitord
+Rule: 502 (level 3) -> 'Ossec server started.'
+ossec: Ossec started.
+
+** Alert 1524675219.37590: mail  - syslog,errors,
+2018 Apr 25 16:53:39 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 16:53:38 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/systemd-tmpfiles-clean.service: Operation not permitted
+
+** Alert 1524675219.37900: mail  - syslog,errors,
+2018 Apr 25 16:53:39 contenedor2->/var/log/syslog
+Rule: 1002 (level 2) -> 'Unknown problem somewhere in the system.'
+Apr 25 16:53:38 contenedor2 systemd[1]: Failed to reset devices.list on /system.slice/ondemand.service: Operation not permitted
+
+** Alert 1524675529.38196: mail  - ossec,
+2018 Apr 25 16:58:49 contenedor2->ossec-monitord
+Rule: 504 (level 3) -> 'Ossec agent disconnected.'
+ossec: Agent disconnected: 'contenedor3-10.198.59.240'.
+
+** Alert 1524675943.38395: mail  - ossec,
+2018 Apr 25 17:05:43 (contenedor3) 10.198.59.240->ossec
+Rule: 503 (level 3) -> 'Ossec agent started.'
+ossec: Agent started: 'contenedor3->10.198.59.240'.
+
