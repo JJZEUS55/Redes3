@@ -21,6 +21,7 @@ public class ExpresionesRegulares {
 
     }
 
+    //PARA OSSC
     //Expresion que obtiene lo que esta entre ' '  sirve para identificar a los usuarios
     public static String expresionUsuario(String usuario) {
         String aux = "";
@@ -45,5 +46,29 @@ public class ExpresionesRegulares {
         }
         return aux;
     }
-
+    
+    //PARA SNORT
+    public static String expresionClasificacion(String linea){
+        String aux = "";
+        pat = Pattern.compile("\\[(Classification: .*?)\\]");
+        mat = pat.matcher(linea);
+        
+        while(mat.find()){
+            aux = mat.group();
+        }
+        System.out.println(aux);
+        return aux;
+    }
+    
+    public static String expresionPrioridad(String linea){
+        String aux = "";
+        pat = Pattern.compile("\\[(Priority: .*?)\\]");
+        mat = pat.matcher(linea);
+        
+        while(mat.find()){
+            aux = mat.group();
+        }
+        System.out.println(aux);
+        return aux;
+    }
 }
