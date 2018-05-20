@@ -27,7 +27,7 @@ public class Ventas {
     }
     
     public void removeBebidaVendida(int num){
-        this.ingresos -= this.bebidasVendidas.get(num).getCantidad(); //Eliminamos primero el costo de la bebida        
+        this.ingresos -= this.bebidasVendidas.get(num).getCantidadActual(); //Eliminamos primero el costo de la bebida        
         this.bebidasVendidas.remove(num); //Eliminamos la bebida vendida
     }
 }

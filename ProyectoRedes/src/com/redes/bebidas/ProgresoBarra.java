@@ -5,23 +5,31 @@
  */
 package com.redes.bebidas;
 
+import java.util.concurrent.Callable;
+import java.util.concurrent.TimeUnit;
+
 /**
  *
  * @author geoge
  */
-public class ProgresoBarra implements Runnable{
+public class ProgresoBarra implements Callable{
     private Bebida bebida;
     private int contBebida;
 
     public ProgresoBarra(Bebida bebida) {
         this.bebida = bebida;
-        this.contBebida = 0;
+        this.contBebida = 1;
     }
     
-    @Override
-    public void run() {
-        contBebida++;
+    public ProgresoBarra(){
         
+    }
+       
+    @Override
+    public Integer call() throws Exception {
+        TimeUnit.SECONDS.sleep(1);
+        contBebida += 1;
+        return contBebida;
     }
     
     

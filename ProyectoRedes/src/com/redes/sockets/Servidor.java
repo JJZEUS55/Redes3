@@ -17,6 +17,7 @@ import java.util.logging.Logger;
  * @author geoge
  */
 public class Servidor extends Conexion{
+    private String mensajeRecibido;
     
     public Servidor() {
         super("servidor");
@@ -28,11 +29,17 @@ public class Servidor extends Conexion{
             cs = ss.accept();
             System.out.println("Cliente Conectado");
             entrada = new DataInputStream(cs.getInputStream());
-            System.out.println("Se ha recibido el mensaje " + entrada.readUTF());
+            this.mensajeRecibido = entrada.readUTF();
+            System.out.println("Se ha recibido el mensaje " + this.mensajeRecibido);
             cs.close();
         } catch (IOException ex) {
             System.out.println("Problema Iniciar Servidor: " + ex.getMessage());
             Logger.getLogger(Servidor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+    public String getMensajeRecibido() {
+        return mensajeRecibido;
+    }    
+    
 }
