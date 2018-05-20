@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp"
+            android:text="Bebidas" />
+
+        <Button
+            android:id="@+id/jbtnCoca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="133dp"
+            android:text="Coca - Cola" />
+
+        <Button
+            android:id="@+id/jbtnSprite"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/jbtnCoca"
+            android:layout_toEndOf="@+id/textView"
+            android:text="Sprite" />
+
+        <Button
+            android:id="@+id/jbtnFanta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="193dp"
+            android:text="Fanta" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
