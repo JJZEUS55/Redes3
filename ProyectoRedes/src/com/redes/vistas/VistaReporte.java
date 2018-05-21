@@ -5,17 +5,44 @@
  */
 package com.redes.vistas;
 
+import com.redes.bebidas.Bebida;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author geoge
  */
 public class VistaReporte extends javax.swing.JFrame {
 
+    private List<Bebida> listBebidas;
+
     /**
      * Creates new form VistaReporte
      */
     public VistaReporte() {
         initComponents();
+        listBebidas = new ArrayList<Bebida>();
+        limpiarTabla();
+    }
+
+    public void addValoresTabla(Bebida bebida) {
+        DefaultTableModel modelo = (DefaultTableModel) jTablaVentas.getModel();
+        Object[] fila = new Object[4];
+        fila[0] = bebida.getNombre();
+        fila[1] = bebida.getPrecio();
+        fila[2] = bebida.getNumBebida();
+        fila[3] = bebida.getPrecio() * bebida.getNumBebida();
+        modelo.addRow(fila);
+        listBebidas.add(bebida);
+        jTablaVentas.setModel(modelo);
+    }
+
+    public void limpiarTabla() {
+        DefaultTableModel modelo = (DefaultTableModel) jTablaVentas.getModel();
+        modelo.setRowCount(0);
+        jTablaVentas.setModel(modelo);
     }
 
     /**
@@ -30,24 +57,34 @@ public class VistaReporte extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBebidas = new javax.swing.JComboBox<>();
         jbtnBusqueda = new javax.swing.JButton();
         jbtnMostarTodo = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTablaVentas = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Reporte de Ventas");
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLabel1.setText("Reporte de Ventas");
 
         jLabel2.setText("Bebida");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Coca Cola", "Fanta", "Sprite" }));
+        jComboBebidas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Coca Cola", "Fanta", "Sprite" }));
+        jComboBebidas.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBebidasItemStateChanged(evt);
+            }
+        });
 
         jbtnBusqueda.setText("Busqueda");
 
         jbtnMostarTodo.setText("Mostrar Todo");
+        jbtnMostarTodo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnMostarTodoActionPerformed(evt);
+            }
+        });
 
         jTablaVentas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -57,7 +94,7 @@ public class VistaReporte extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Nombre Bebida", "Costo por Bebida", "Numero Bebidas Vendidas", "Ventas Totales"
             }
         ));
         jScrollPane1.setViewportView(jTablaVentas);
@@ -77,7 +114,7 @@ public class VistaReporte extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jbtnBusqueda)
                         .addGap(18, 18, 18)
@@ -92,12 +129,12 @@ public class VistaReporte extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbtnBusqueda)
                     .addComponent(jbtnMostarTodo))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(296, Short.MAX_VALUE))
+                .addContainerGap(290, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -119,6 +156,28 @@ public class VistaReporte extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jComboBebidasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBebidasItemStateChanged
+        if (evt.getItem().equals("Coca Cola")) {
+            limpiarTabla();
+            addValoresTabla(listBebidas.get(0));
+        } else if (evt.getItem().equals("Fanta")) {
+            limpiarTabla();
+            addValoresTabla(listBebidas.get(1));
+        } else if (evt.getItem().equals("Sprite")) {
+            limpiarTabla();
+            addValoresTabla(listBebidas.get(2));
+        }
+
+    }//GEN-LAST:event_jComboBebidasItemStateChanged
+
+    private void jbtnMostarTodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnMostarTodoActionPerformed
+        // TODO add your handling code here:
+        limpiarTabla();
+        addValoresTabla(listBebidas.get(0));
+        addValoresTabla(listBebidas.get(1));
+        addValoresTabla(listBebidas.get(2));
+    }//GEN-LAST:event_jbtnMostarTodoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,7 +215,7 @@ public class VistaReporte extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBebidas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

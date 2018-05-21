@@ -11,6 +11,8 @@ import com.redes.sockets.Servidor;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Image;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Scanner;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -37,6 +39,7 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
     private Thread hServidor;
     private Bebida coca, fanta, sprite;
     private Servidor servidor;
+    private int numCocas = 0, numFanta = 0, numSprite = 0;
 
     String prueba;
 
@@ -71,10 +74,11 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
         
         while (hActual == hCoca && !(hCoca.isInterrupted())) {
             coca.setCantidadTomada(1);
-            if (coca.getCantidadTomada() == 300) {
+            if (coca.getCantidadTomada() == 300 || coca.getCantidadTomada() == 600) {
+                numCocas += 1;
                 hCoca.interrupt();
                 break;
-            } else {
+            } else {                
                 jBarraCoca.setValue(coca.getCantidadActual());
             }
             try {
@@ -86,10 +90,11 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
 
         while (hActual == hFanta && !(hFanta.isInterrupted())) {
             fanta.setCantidadTomada(1);
-            if (fanta.getCantidadTomada() == 300) {
+            if (fanta.getCantidadTomada() == 300 || fanta.getCantidadTomada() == 600) {
+                numFanta++;
                 hFanta.interrupt();
                 break;
-            } else {
+            } else {                
                 jBarraFanta.setValue(fanta.getCantidadActual());
             }
             try {
@@ -102,10 +107,11 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
         while (hActual == hSprite) {
             System.out.println("Estoy en hilo sprite");
             sprite.setCantidadTomada(1);
-            if (sprite.getCantidadTomada() == 300) {
+            if (sprite.getCantidadTomada() == 300 || sprite.getCantidadTomada() == 600) {
+                numSprite++;
                 hSprite.interrupt();
                 break;
-            } else {
+            } else {                
                 jBarraSprite.setValue(sprite.getCantidadActual());
             }
             try {
@@ -177,12 +183,13 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Servidor Bebidas");
+        setBackground(new java.awt.Color(255, 51, 153));
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLabel1.setText("Servidor");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Coca-Cola", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(255, 51, 51))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Coca-Cola", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(255, 51, 51))); // NOI18N
         jPanel1.setPreferredSize(new java.awt.Dimension(318, 510));
 
         jlblImagenCoca.setPreferredSize(new java.awt.Dimension(600, 600));
@@ -215,7 +222,7 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fanta", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(255, 153, 51))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fanta", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(255, 153, 51))); // NOI18N
         jPanel2.setPreferredSize(new java.awt.Dimension(318, 510));
         jPanel2.setRequestFocusEnabled(false);
 
@@ -250,7 +257,7 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
                 .addContainerGap())
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sprite", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(0, 204, 51))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sprite", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 204, 51))); // NOI18N
 
         jBarraSprite.setForeground(new java.awt.Color(0, 204, 51));
         jBarraSprite.setMaximum(600);
@@ -318,8 +325,8 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
                     .addComponent(jbtnReporte))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 635, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 635, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 645, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 645, Short.MAX_VALUE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -330,6 +337,15 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
 
     private void jbtnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnReporteActionPerformed
         // TODO add your handling code here:
+        System.out.println("Cocas vendidas " + numCocas);
+        VistaReporte reporte = new VistaReporte();
+        coca.setNumBebida(numCocas);
+        fanta.setNumBebida(numFanta);
+        sprite.setNumBebida(numSprite);
+        reporte.addValoresTabla(coca);
+        reporte.addValoresTabla(fanta);
+        reporte.addValoresTabla(sprite);
+        reporte.setVisible(true);
     }//GEN-LAST:event_jbtnReporteActionPerformed
 
     /**

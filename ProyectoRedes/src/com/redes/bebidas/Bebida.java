@@ -10,7 +10,8 @@ package com.redes.bebidas;
  * @author geoge
  */
 public class Bebida {
-    private static int numBebida = 0;
+
+    private int numBebida = 0;
     private String nombre;
     private int precio;
     private int cantidadActual;
@@ -36,8 +37,8 @@ public class Bebida {
     public int getCantidadActual() {
         return this.cantidadActual - this.cantidadTomada;
     }
-    
-    public int getCantidadMaxima(){
+
+    public int getCantidadMaxima() {
         return this.CANTIDAD_MAXIMA;
     }
 
@@ -48,9 +49,17 @@ public class Bebida {
     public void setCantidadTomada(int cantidadTomada) {
         this.cantidadTomada += cantidadTomada;
     }
-    
-    public static int getNumBebida() {
+
+    public void aumentarNumBebida() {
+        numBebida += 1;
+    }
+
+    public int getNumBebida() {
         return numBebida;
     }
     
+    public void setNumBebida(int numeroBebidas){
+        this.numBebida = numeroBebidas;
+    }
+
 }
