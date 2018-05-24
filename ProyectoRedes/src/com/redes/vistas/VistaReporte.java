@@ -64,13 +64,14 @@ public class VistaReporte extends javax.swing.JFrame {
         jTablaVentas = new javax.swing.JTable();
 
         setTitle("Reporte de Ventas");
+        setPreferredSize(new java.awt.Dimension(800, 600));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLabel1.setText("Reporte de Ventas");
 
         jLabel2.setText("Bebida");
 
-        jComboBebidas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Coca Cola", "Fanta", "Sprite" }));
+        jComboBebidas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una bebida", "Coca Cola", "Fanta", "Sprite" }));
         jComboBebidas.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jComboBebidasItemStateChanged(evt);
