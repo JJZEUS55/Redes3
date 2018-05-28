@@ -12,11 +12,20 @@ import java.util.Scanner;
 public class Cliente extends AsyncTask<String, Void, Void>{
 
     protected Socket cs;
-    private String host = "192.168.0.4";
-    private int puerto = 3060;
+    private String host;
+    private int puerto;
     protected DataInputStream entrada;
     protected DataOutputStream salida;
 
+    public Cliente(){
+        host = "192.168.0.4";
+        puerto = 3060;
+    }
+
+    public Cliente(String ip, int puerto){
+        this.host = ip;
+        this.puerto = puerto;
+    }
 
     public void mandarMensajeServidor(String bebida){
 

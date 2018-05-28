@@ -19,7 +19,6 @@ public class Bebida {
     private final int CANTIDAD_MAXIMA = 600;
 
     public Bebida(String nombre, int precio, int cantidad) {
-        this.numBebida++;
         this.nombre = nombre;
         this.precio = precio;
         this.cantidadActual = cantidad;
@@ -57,8 +56,8 @@ public class Bebida {
     public int getNumBebida() {
         return numBebida;
     }
-    
-    public void setNumBebida(int numeroBebidas){
+
+    public void setNumBebida(int numeroBebidas) {
         this.numBebida = numeroBebidas;
     }
 
