@@ -66,6 +66,7 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
             String pedidoBebida;
             servidor.iniciarServidor();
             pedidoBebida = servidor.getMensajeRecibido();
+            System.out.println("Hilo Servidor: " +pedidoBebida);
             tomarBebidaCliente(pedidoBebida);
         }
 
