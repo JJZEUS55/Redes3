@@ -81,7 +81,7 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
                 jBarraCoca.setValue(coca.getCantidadActual());
             }
             try {
-                Thread.sleep(25);
+                Thread.sleep(50);
             } catch (InterruptedException ex) {
                 Logger.getLogger(VistaBebidas.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -192,6 +192,7 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
 
         jLabel2 = new javax.swing.JLabel();
         jSplitPane1 = new javax.swing.JSplitPane();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
         jPanelSuperior = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jIconoMenu = new javax.swing.JLabel();
@@ -224,6 +225,17 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
         jLabel7 = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Servidor Bebidas");
@@ -348,7 +360,7 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
 
         jPanelContadorBebidas.setPreferredSize(new java.awt.Dimension(1110, 657));
 
-        jPanelCoca.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Coca-Cola", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(255, 51, 51))); // NOI18N
+        jPanelCoca.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Coca-Cola", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(255, 51, 51))); // NOI18N
         jPanelCoca.setPreferredSize(new java.awt.Dimension(318, 510));
 
         jlblImagenCoca.setPreferredSize(new java.awt.Dimension(600, 600));
@@ -378,10 +390,10 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
                     .addGroup(jPanelCocaLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jlblImagenCoca, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanelFanta.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fanta", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(255, 153, 51))); // NOI18N
+        jPanelFanta.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fanta", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(255, 153, 51))); // NOI18N
         jPanelFanta.setPreferredSize(new java.awt.Dimension(318, 510));
         jPanelFanta.setRequestFocusEnabled(false);
 
@@ -416,7 +428,7 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
                 .addContainerGap())
         );
 
-        jPanelSprite.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sprite", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(0, 204, 51))); // NOI18N
+        jPanelSprite.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sprite", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 204, 51))); // NOI18N
 
         jBarraSprite.setForeground(new java.awt.Color(0, 204, 51));
         jBarraSprite.setMaximum(600);
@@ -592,16 +604,6 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jIconoMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jIconoMenuMouseClicked
-        // TODO add your handling code here:
-        if (ACTIVAR_MENU == false) {
-            ACTIVAR_MENU = true;
-        } else {
-            ACTIVAR_MENU = false;
-        }
-        jMenuLateral.setVisible(ACTIVAR_MENU);
-    }//GEN-LAST:event_jIconoMenuMouseClicked
-
     private void jIconoBebidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jIconoBebidaMouseClicked
         // TODO add your handling code here:
         jPanelInicio.setVisible(false);
@@ -648,6 +650,16 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
         jPanelInicio.setVisible(true);
     }//GEN-LAST:event_jIconoCasaMouseClicked
 
+    private void jIconoMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jIconoMenuMouseClicked
+        // TODO add your handling code here:
+        if (ACTIVAR_MENU == false) {
+            ACTIVAR_MENU = true;
+        } else {
+            ACTIVAR_MENU = false;
+        }
+        jMenuLateral.setVisible(ACTIVAR_MENU);
+    }//GEN-LAST:event_jIconoMenuMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -688,6 +700,7 @@ public class VistaBebidas extends javax.swing.JFrame implements Runnable {
     private javax.swing.JProgressBar jBarraFanta;
     private javax.swing.JProgressBar jBarraSprite;
     private javax.swing.JComboBox<String> jComboBebidas;
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jIconoBebida;
     private javax.swing.JLabel jIconoCasa;
     private javax.swing.JLabel jIconoMenu;

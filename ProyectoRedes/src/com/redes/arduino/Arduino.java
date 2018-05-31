@@ -7,6 +7,8 @@ package com.redes.arduino;
 
 import com.panamahitek.ArduinoException;
 import com.panamahitek.PanamaHitek_Arduino;
+import com.sun.org.apache.xerces.internal.impl.dv.xs.TimeDV;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import jssc.SerialPortEvent;
@@ -17,41 +19,48 @@ import jssc.SerialPortException;
  *
  * @author geoge
  */
-public class Arduino {
+public class Arduino implements Runnable{
     
-    private final String PUERTO = "COM4";
+    private final String PUERTO = "COM12";
     private PanamaHitek_Arduino ino;
-    private SerialPortEventListener listener;
+    private String mensaje;
         
-    public Arduino() throws ArduinoException{
+    public Arduino(String mensaje) throws ArduinoException{
         ino = new PanamaHitek_Arduino();
-        listener = new SerialPortEventListener() {
-            @Override
-            public void serialEvent(SerialPortEvent spe) {
-                try {
-                    if(ino.isMessageAvailable()){
-                        System.out.println("Resultado Serial Port: " + ino.printMessage());
-                    }
-                } catch (SerialPortException ex) {
-                    ex.printStackTrace();
-                    Logger.getLogger(Arduino.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (ArduinoException ex) {
-                    ex.printStackTrace();
-                    Logger.getLogger(Arduino.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        };
-        ino.arduinoRXTX(PUERTO, 9600, listener);        
+        ino.arduinoTX(PUERTO, 9600);     
+        this.mensaje = mensaje;
     }
     
     
-    public void mandarMensajeArduino(String mensaje) throws ArduinoException, SerialPortException{
+    public void mandarMensajeArduino() throws ArduinoException, SerialPortException, InterruptedException{
         System.out.println("Se ha mandado el mensaje al arduino: " + mensaje);
         ino.sendData(mensaje);
+        //TimeUnit.SECONDS.sleep(11);
+        
+    }
+    
+    public void apagarArduino() throws ArduinoException, SerialPortException{
+        System.out.println("Se esta mandando un 0 ");
+        ino.sendData("0");
     }
     
     public String recibirMensajeArduino(){
         return "Aun no esta Implementado :'v";
+    }
+
+    @Override
+    public void run() {
+        try {
+            mandarMensajeArduino();
+            Thread.sleep(10000);
+            apagarArduino();
+        } catch (ArduinoException ex) {
+            Logger.getLogger(Arduino.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SerialPortException ex) {
+            Logger.getLogger(Arduino.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Arduino.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 }
